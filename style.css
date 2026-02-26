@@ -1,8 +1,18 @@
+/* General styles */
 body {
   background: #0f0f0f;
   color: #ffffff;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 20px 0;
+  color: #00e5ff;
+  letter-spacing: 2px;
 }
 
 h2 {
@@ -11,6 +21,18 @@ h2 {
   letter-spacing: 3px;
 }
 
+/* Timer */
+.timer {
+  font-size: 2rem;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+.timer-buttons button {
+  margin: 10px 5px;
+}
+
+/* Buttons */
 button {
   margin: 8px;
   padding: 12px 18px;
@@ -32,40 +54,111 @@ button:hover {
   background: #00c853;
 }
 
-.scores {
-  background: #1c1c1c;
-  display: flex;
-  justify-content: space-around;
-  width: 650px;
-  margin: 30px auto;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 20px #00e5ff;
-}
-
-.score {
-  font-size: 85px;
-  color: #ff1744;
-  font-weight: bold;
-}
-
 .halfs {
-  font-size: 22px;
+  font-size: 1.2rem;
   color: #ccc;
 }
 
-.halfTime {
-  color: #ff9100;
-  font-size: 32px;
+.reset {
+  background: #f44336;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* Scores container */
+.scores {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 900px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00e5ff;
+  gap: 20px;
+}
+
+/* Team section */
+.team {
+  flex: 1 1 250px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+.team-buttons {
+  margin: 10px 0;
+}
+
+/* Scores & fouls */
+.score {
+  font-size: 5rem;
+  color: #ff1744;
   font-weight: bold;
+  margin: 10px 0;
 }
 
 .fouls {
   color: #ffd600;
-  font-size: 55px;
+  font-size: 3rem;
+  margin-top: 10px;
 }
- .timer {
-      font-size: 40px;
-      margin-top: 30px;
-      font-weight: bold;
-    }
+
+.half-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 150px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+.halfTime {
+  color: #ff9100;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .score {
+    font-size: 3.5rem;
+  }
+
+  .fouls {
+    font-size: 2.2rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .scores {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .half-section {
+    flex: none;
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .team {
+    width: 80%;
+  }
+}
