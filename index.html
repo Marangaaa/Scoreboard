@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball Score</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOLLEYBALL SCORE</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-      <h1>🏀 Basketball Scoreboard</h1>
-
-  <div class="timer">
+  <h1>VOLLEYBALL SCOREBOARD🏐</h1>
+ <div class="timer">
     Time: <span id="time">10:00</span>
     <br><br>
     <button onclick="startTimer()">Start</button>
     <button onclick="stopTimer()">Stop</button>
   </div>
-
-  <div class="scoreboard">
-    <div class="team">
-      <h2>Team A</h2>
+  <div class="scores">
+    <div>
+      <h2>TEAM 1</h2>
       <div class="score" id="scoreA">0</div>
-      <button class="add" onclick="addPoints('A',1)">+1</button>
-      <button class="add" onclick="addPoints('A',2)">+2</button>
-      <button class="add" onclick="addPoints('A',3)">+3</button>
-      <h3>Fouls: <span id="foulsA">0</span></h3>
-      <button class="foul" onclick="addFoul('A')">Add Foul</button>
+      <br>
+      <button class="add" onclick="addPoints(1,1)">+1</button>
+      <button class="add" onclick="addPoints(1,2)">+2</button>
+      <button class="add" onclick="addPoints(1,3)">+3</button>
+      <br>
+      <button onclick=" addFoul(1)">Fouls</button>
+     <div class="fouls" id="fouls1">0</div> 
     </div>
-
-    <div class="team">
-      <h2>Team B</h2>
-      <div class="score" id="scoreB">0</div>
-      <button class="add" onclick="addPoints('B',1)">+1</button>
-      <button class="add" onclick="addPoints('B',2)">+2</button>
-      <button class="add" onclick="addPoints('B',3)">+3</button>
-      <h3>Fouls: <span id="foulsB">0</span></h3>
-      <button class="foul" onclick="addFoul('B')">Add Foul</button>
-    </div>
+    <div class="half-section">
+    <button class="halfs" onclick="nextHalf()">HALF</button>
+    <div class="halfTime" id="halfTime">1</div>
   </div>
+    <div>
+      <h2>TEAM 2</h2>
+      <div class="score" id="scoreB">0</div>
+      <br>
+      <button class="add" onclick="addPoints(2,1)">+1</button>
+      <button class="add" onclick="addPoints(2,2)">+2</button>
+      <button class="add" onclick="addPoints(2,3)">+3</button>
+      <br>
+       <button onclick=" addFoul(2)">Fouls</button>
+     <div class="fouls" id="fouls2">0</div> 
+    </div>
 
+  </div>
   <button class="reset" onclick="resetGame()">Reset Game</button>
-
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
